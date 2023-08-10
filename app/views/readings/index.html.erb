@@ -1,5 +1,11 @@
 <!--Descriptive page name, messages and instructions-->
-<h2 class="heading"><%= ts('History') %></h2>
+<h2 class="heading">
+  <% if user_readings_path(@user, :show => 'to-read') %>
+    <%= ts('Marked for Later') %>
+  <% else %>
+    <%= ts('History') %>
+  <% end %>
+</h2>
 <!--/descriptions-->
 
 <!--subnav-->
